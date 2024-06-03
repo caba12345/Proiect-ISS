@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="800.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminController">
+   <children>
+      <Label alignment="CENTER" layoutX="220.0" layoutY="20.0" prefHeight="50.0" prefWidth="360.0" text="Drug Management">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="20.0" layoutY="85.0" prefHeight="18.0" prefWidth="120.0" text="List of Drugs">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="400.0" layoutY="90.0" text="Name" />
+      <Label layoutX="400.0" layoutY="150.0" text="Price" />
+      <Label layoutX="400.0" layoutY="210.0" text="Description" />
+      <TextField fx:id="nameTextField" layoutX="500.0" layoutY="85.0" prefHeight="30.0" prefWidth="250.0" />
+      <TextField fx:id="priceTextField" layoutX="500.0" layoutY="145.0" prefHeight="30.0" prefWidth="250.0" />
+      <TextField fx:id="descriptionTextField" layoutX="500.0" layoutY="205.0" prefHeight="30.0" prefWidth="250.0" />
+      <Button layoutX="450.0" layoutY="280.0" mnemonicParsing="false" onAction="#handleAddDrug" prefHeight="30.0" prefWidth="100.0" text="Add Drug" />
+      <Button layoutX="590.0" layoutY="280.0" mnemonicParsing="false" onAction="#handleUpdateDrug" prefHeight="30.0" prefWidth="120.0" text="Update Drug" />
+      <Button layoutX="490.0" layoutY="340.0" mnemonicParsing="false" onAction="#handleDeleteDrug" prefHeight="30.0" prefWidth="120.0" text="Delete Drug" />
+      <TableView fx:id="tableViewDrugs" layoutX="20.0" layoutY="120.0" prefHeight="357.0" prefWidth="350.0">
+         <columns>
+            <TableColumn fx:id="tableColumnName" prefWidth="120.0" text="Name" />
+            <TableColumn fx:id="tableColumnPrice" prefWidth="80.0" text="Price" />
+            <TableColumn fx:id="tableColumnDescription" prefWidth="150.0" text="Description" />
+         </columns>
+      </TableView>
+      <Button layoutX="686.0" layoutY="437.0" mnemonicParsing="false" onAction="#handleLogOut" prefHeight="40.0" prefWidth="100.0" text="Logout" />
+   </children>
+</AnchorPane>
